@@ -1,0 +1,44 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Color system
+// Gray
+$gray-100: #eff0f5 !default;
+$gray-200: #f5f6f7 !default;
+$gray-300: #e9ebf4 !default;
+$gray-400: #E6E7E8 !default;
+$gray-500: #939598 !default;
+$gray-600: #808285 !default;
+$gray-700: #58595b !default;
+
+// Theme color Override
+$green:  #56b27b !default;
+$blue:   #104f67 !default;
+$yellow: #fdc683 !default;
+
+$colors: () !default;
+// $colors: map-merge(
+//   (
+//     "light-purple": $light-purple,
+//   ),
+//   $colors
+// );
+$primary: $green !default;
+$secondary: $blue !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    // "light-purple": $light-purple,
+    "info": $gray-400,
+    "dark": $gray-700,
+  ),
+  $theme-colors
+);
+
+
+// Links
+//
+// Style anchor elements.
+$link-color: theme-color("secondary") !default;
