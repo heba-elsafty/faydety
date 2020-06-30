@@ -1,0 +1,14 @@
+.list-group{
+  &.custom-list-group {
+    .list-group-item{
+      background-color: transparent;
+      color: $gray-600;
+      &.active{
+        background-color: white;
+        border-color:  rgba(0, 0, 0, 0.125);
+        color: $gray-600;
+        font-weight: normal;
+      }
+    }
+  }
+}

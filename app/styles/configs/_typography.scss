@@ -1,0 +1,48 @@
+// Font Size
+$font-size-sm : 0.875rem;     //14px
+$font-size-base : 1rem;       //16px
+$font-size-med : 1.125rem;    //18px
+$font-size-large : 1.25rem;   //20px
+$font-size-xl : 2rem;         //32px
+$font-size-xxl : 2.5rem;      //40px
+
+// Link
+a{
+  &.active{
+    font-weight: bold;
+  }
+}
+
+// Heading
+h1,h3,h4{
+  font-weight: 700;
+}
+
+h1, .font-size-xxlarge {
+  font-size: $font-size-xxl;
+}
+
+h2, .font-size-xlarge{
+  font-size: $font-size-xl;
+  font-weight: 900;
+}
+
+h3{
+  font-size: $font-size-large;
+}
+
+h4, .font-size-medium{
+  font-size: $font-size-med;
+}
+
+h5, .font-size-base{
+  font-size: $font-size-base;
+}
+
+h6, .font-size-sm{
+  font-size: $font-size-sm;
+}
+
+p{
+  font-family: $secondary-font-family;
+}
