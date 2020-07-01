@@ -2,7 +2,6 @@
 
 // Color system
 // Gray
-$gray-100: #eff0f5 !default;
 $gray-200: #f8f9fa !default;
 $gray-300: #d4d9df !default;
 $gray-400: #cdd3da !default;
@@ -12,19 +11,20 @@ $gray-700: #6c757d !default;
 $gray-800: #4e5459 !default;
 $gray-900: #343a40 !default;
 
-
 // Theme color Override
-$green:  #56b27b !default;
-$blue:   #104f67 !default;
+$green: #56b27b !default;
+$blue: #104f67 !default;
 $yellow: #fdc683 !default;
 $light-green: #dff1e6 !default;
 $grayish-blue: #3d495c !default;
+$light-blue: #f1f5f6 !default;
 $colors: () !default;
 
 $colors: map-merge(
   (
     "light-green": $light-green,
     "grayish-blue": $grayish-blue,
+    "light-gray": $light-blue,
   ),
   $colors
 );
@@ -38,6 +38,7 @@ $theme-colors: map-merge(
     "secondary": $secondary,
     "light-green": $light-green,
     "grayish-blue": $grayish-blue,
+    "light-blue": $light-blue,
     "light": $gray-200,
     "info": $gray-400,
     "dark": $gray-900,
@@ -45,25 +46,31 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
-
 // Links
 //
 // Style anchor elements.
 $link-color: theme-color("secondary") !default;
 
-
 // Fonts
+// Font Size
+$font-size-sm : 0.875rem;     //14px
+$font-size-base : 1rem;       //16px
+$font-size-med : 1.125rem;    //18px
+$font-size-large : 1.25rem;   //20px
+$font-size-xl : 2rem;         //32px
+$font-size-xxl : 2.5rem;      //40px
+
 // montserrat fonts
 $font-montserrat-path: "../fonts/montserrat" !default;
 $font-roboto-path: "../fonts/roboto" !default;
-$primary-font-family: "Montserrat", sans-serif !default ;
-$secondary-font-family: "Roboto", sans-serif !default ;
+$primary-font-family: "Montserrat", sans-serif !default;
+$secondary-font-family: "Roboto", sans-serif !default;
 // Icomoon Fonts
-$icomoon-font-family: "icomoon" !default ;
+$icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "../fonts/icomoon" !default;
 
 $icon-Shape: "\e900";
 
 // Border
 $border-radius-base: 0.25rem; //4px
-$border-radius-18: 1.125rem;  //18px
+$border-radius-18: 1.125rem; //18px

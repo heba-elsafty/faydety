@@ -1,8 +1,13 @@
 @import "./coustom-variables";
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "./componets/componets-index";
 @import "./configs/configs-index";
 @import "./layout/layout-index";
+@import "./mixin/mixin";
 
 * {
   margin: 0;
@@ -10,9 +15,21 @@
 
 body{
   font-size: $font-size-sm;
-  font-family: $font-family-base;
+  font-family: $primary-font-family;
   font-weight: normal;
   [lang="ar"] & {
     direction: rtl;
+  }
+}
+
+.vertical-line {
+  position: relative;
+  &::after{
+    content: "";
+    @include vertical-line(50%, $secondary);
+    @include position(absolute, 0, 0, $right: 0, $left: auto);
+    [lang = "ar"] & {
+      @include position(absolute, 0, 0, $left: 0, $right: auto);
+    }
   }
 }

@@ -1,14 +1,29 @@
-.list-group{
-  &.custom-list-group {
+.list-group {
+  .list-group-item {
+    background-color: transparent;
+    @extend .px-2, .py-1;
+  }
+  &.border-0{
     .list-group-item{
+      @extend .border-0
+    }
+  }
+  &.custom-list-group {
+    .list-group-item {
       background-color: transparent;
       color: $gray-600;
-      &.active{
+      &.active {
         background-color: white;
-        border-color:  rgba(0, 0, 0, 0.125);
+        border-color: rgba(0, 0, 0, 0.125);
         color: $gray-600;
         font-weight: normal;
       }
+    }
+  }
+
+  &.social-media{
+    a{
+      font-size: $font-size-large;
     }
   }
 }

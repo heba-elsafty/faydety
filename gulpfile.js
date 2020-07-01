@@ -20,7 +20,9 @@ const isTest = process.env.NODE_ENV === 'test';
 const isDev = !isProd && !isTest;
 
 function styles() {
-  return src('app/styles/*.scss','/node_modules/bootstrap/scss/bootstrap.scss')
+  return src('app/styles/*.scss',
+             '/node_modules/bootstrap/scss/bootstrap.scss'
+             )
     .pipe($.plumber())
     .pipe($.if(!isProd, $.sourcemaps.init()))
     .pipe($.sass.sync({
