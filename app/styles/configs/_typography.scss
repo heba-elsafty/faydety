@@ -23,7 +23,7 @@ h3{
   font-size: $font-size-large;
 }
 
-h4, .font-size-medium{
+h4, .font-size-med{
   font-size: $font-size-med;
 }
 
@@ -36,5 +36,14 @@ h6, .font-size-sm{
 }
 
 p{
+  font-family: $secondary-font-family;
+}
+
+// Font Family
+.primary-font-family{
+  font-family: $primary-font-family;
+}
+
+.secondary-font-family{
   font-family: $secondary-font-family;
 }

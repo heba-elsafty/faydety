@@ -31,5 +31,8 @@ body{
     [lang = "ar"] & {
       @include position(absolute, 0, 0, $left: 0, $right: auto);
     }
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
   }
 }
