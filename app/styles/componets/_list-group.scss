@@ -11,6 +11,7 @@
     .list-group-item {
       background-color: transparent;
       color: $gray-600;
+      border-radius: 0;
       .active {
         background-color: white;
         border-color: rgba(0, 0, 0, 0.125);

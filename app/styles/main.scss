@@ -1,22 +1,19 @@
 @import "./coustom-variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "./mixin/mixin";
 @import "./componets/componets-index";
 @import "./configs/configs-index";
 @import "./layout/layout-index";
-@import "./mixin/mixin";
 
 * {
   margin: 0;
 }
 
-body{
+body {
   font-size: $font-size-sm;
   font-family: $primary-font-family;
   font-weight: normal;
+  overflow-x: hidden;
   [lang="ar"] & {
     direction: rtl;
   }
@@ -24,15 +21,74 @@ body{
 
 .vertical-line {
   position: relative;
-  &::after{
+  &::after {
     content: "";
     @include vertical-line(50%, $secondary);
     @include position(absolute, 0, 0, $right: 0, $left: auto);
-    [lang = "ar"] & {
+    [lang="ar"] & {
       @include position(absolute, 0, 0, $left: 0, $right: auto);
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       display: none;
     }
   }
+}
+
+// Read More Accordion
+.read-more {
+  p {
+    outline: none;
+  }
+}
+
+.viewMore {
+  &[aria-expanded="false"] {
+    &::before {
+      content: " More details";
+      [lang="ar"] & {
+        content: " المزيد من التفاصيل";
+      }
+    }
+    &::after {
+      content: "#{$icon-down-arrow}";
+      font-family: $icomoon-font-family;
+      padding: 0 0.3rem;
+      font-weight: bold;
+    }
+  }
+  &[aria-expanded="true"] {
+    &::before {
+      content: "Less details";
+      [lang="ar"] & {
+        content: "تفاصيل اقل";
+      }
+    }
+    &::after {
+      content: "#{$icon-up-arrow}";
+      font-family: $icomoon-font-family;
+      padding: 0 0.3rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.no-gutters {
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+
+// opacity
+.opacity-7 {
+  opacity: 0.7;
+}
+
+//truncate 3 lines
+
+.custom-text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
