@@ -7,6 +7,18 @@
   }
 }
 
+.dropdown-toggle{
+  &::after{
+    content: "#{$icon-down-arrow}";
+    font-family: $icomoon-font-family;
+    border-right: none;
+    border-left: none;
+    border-top:none;
+    font-size: .75rem;
+    vertical-align: baseline;
+  }
+}
+
 .custom-dropdown {
   .dropdown-menu {
     a {
