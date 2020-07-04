@@ -37,6 +37,7 @@ body {
 
 // viewMore Accordion
 .viewMore {
+  font-family: $secondary-font-family;
   &[aria-expanded="false"] {
     &::before {
       content: " More details";
