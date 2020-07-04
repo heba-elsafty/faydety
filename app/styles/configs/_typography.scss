@@ -67,3 +67,9 @@ p {
 .text-end {
   text-align: end;
 }
+
+@include media-breakpoint-down(xs) {
+  .text-xs-center{
+    text-align: center;
+  }
+}

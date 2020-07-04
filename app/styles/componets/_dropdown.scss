@@ -10,7 +10,8 @@
 .custom-dropdown {
   .dropdown-menu {
     a {
-      &:hover, &:focus{
+      &:hover,
+      &:focus {
         background: transparent;
         text-decoration: underline;
       }
@@ -28,130 +29,24 @@
       }
     }
   }
-  .show {
-    @include media-breakpoint-up(lg) {
-      &::before {
-        content: "#{$icon-up-arrow-solid}";
-        @include position(absolute, -1rem, 0, auto, 23%);
-        font-family: $icomoon-font-family;
-        color: $primary;
-        padding-left: 4.5rem;
-        [lang="ar"] & {
-          padding-right: 4.5rem;
-          padding-left: 0;
-          right: 23%;
-          left: auto;
+  &.show {
+    .dropdown-toggle{
+      position: relative;
+      @include media-breakpoint-up(lg) {
+        &::before {
+          content: "#{$icon-up-arrow-solid}";
+          @include position(absolute, 3.5rem, 0, 1rem, auto);
+          font-family: $icomoon-font-family;
+          color: $primary;
+          padding-left: 4.5rem;
+          [lang="ar"] & {
+            padding-right: 4.5rem;
+            padding-left: 0;
+            right: auto;
+            left: 1rem;
+          }
         }
       }
     }
   }
 }
-
-// &.custom-dropdown {
-//   position: relative;
-//   left: -26rem;
-//   right: -26rem;
-//   min-width: 100vw;
-//   margin: 1.125rem 0 0;
-
-//   @media screen and (max-width: 1366px) {
-//     left: -21rem;
-//     right: -21rem;
-//   }
-
-//   @media screen and (max-width:768px){
-//     left: 0 !important;
-//     right: 0 !important;
-//     min-width: auto;
-//   }
-
-//   @include media-breakpoint-down(md) {
-//     left: 0 ;
-//     right: 0;
-//     min-width: auto;
-//   }
-
-//   @include media-breakpoint-down(lg) {
-//     left: -15.5rem;
-//     right:  -15.5rem;
-//   }
-
-//   &::before {
-//     content: "#{$icon-up-arrow-solid}";
-//     @include position(absolute, -0.7rem,0, 30.5rem, 30.5rem);
-//     font-family: $icomoon-font-family;
-//     color: $primary;
-
-//     @include media-breakpoint-down(md) {
-//       left: 4rem;
-//       right: 4rem;
-//     }
-
-//     @include media-breakpoint-down(lg) {
-//       left: 20rem !important;
-//       right: 20rem !important;
-//     }
-
-//   @media screen and (max-width:768px){
-//     left: 4rem !important;
-//     right: 4rem !important;
-//   }
-
-//   @media screen and (max-width:1366px){
-//     left: 25.5rem;
-//     right: 25.5rem;
-//   }
-
-//   }
-//   a {
-//     width: auto;
-//     display: inline-block;
-//     position: relative;
-//     &::after {
-//       content: "";
-//       @include position(absolute, 1.5rem, 0, $right: 0, $left: auto);
-//       @include vertical-line(50%, #fff);
-//       opacity: 0.39;
-//       @include media-breakpoint-down(sm) {
-//         display: none;
-//       }
-//     }
-//     padding: 2rem 1.5rem;
-//     &:hover, &:focus {
-//       background-color: transparent;
-//       text-decoration: underline;
-//     }
-//     &:first-child {
-//       margin-left: 25rem;
-//       [lang="ar"] & {
-//         margin-right: 25rem;
-//         margin-left: 0;
-//       }
-//       @include media-breakpoint-down(md) {
-//         margin: 0;
-//       }
-
-//       @media screen and (max-width:768px){
-//         margin: 0 !important;
-//       }
-
-//       @media screen and (max-width: 1366px) {
-//         margin-left: 20rem;
-//         [lang="ar"] & {
-//           margin-right: 20rem;
-//         }
-//       }
-
-//       @include media-breakpoint-down(lg) {
-//         margin-left: 14.5rem;
-//       }
-//       [lang="ar"] & {
-//         margin-right: 14.5rem;
-//       }
-//     }
-//     @include media-breakpoint-down(sm) {
-//       width: 100%;
-//       padding: 1rem;
-//     }
-//   }
-// }

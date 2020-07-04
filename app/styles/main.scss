@@ -19,6 +19,7 @@ body {
   }
 }
 
+
 .vertical-line {
   position: relative;
   &::after {
@@ -34,13 +35,7 @@ body {
   }
 }
 
-// Read More Accordion
-.read-more {
-  p {
-    outline: none;
-  }
-}
-
+// viewMore Accordion
 .viewMore {
   &[aria-expanded="false"] {
     &::before {
@@ -84,7 +79,6 @@ body {
 }
 
 //truncate 3 lines
-
 .custom-text-truncate {
   display: -webkit-box;
   -webkit-line-clamp: 3;
